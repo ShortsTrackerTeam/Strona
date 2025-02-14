@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shorts Tracker</title>
+    <style>
+        :root {
+            --background: #1a1a1a;
+            --card-background: #2d2d2d;
+            --text-color: #ffffff;
+            --feature-background: #363636;
+        }
+
+        [data-theme="light"] {
+            --background: #f0f0f0;
+            --card-background: white;
+            --text-color: #333;
+            --feature-background: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            transition: background-color 0.3s;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+
+        .theme-switch, .lang-switch {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .theme-switch:hover, .lang-switch:hover {
+            background: #444;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 7rem auto 4rem;
+            padding: 2rem;
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content h1 {
+            color: #1a73e8;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .content p {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .site-title {
+            background: linear-gradient(90deg, #ff0000, #0000ff);
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        [lang="pl"] .en {
+            display: none;
+        }
+
+        [lang="en"] .pl {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                margin: 5rem auto 2rem;
+                padding: 1.5rem;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+        }
+        
+        [data-page="home"] .about-page,
+        [data-page="about"] .home-page {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="https://shortstracker.com" class="en site-title">Shorts Tracker</a>
+            <a href="https://shortstracker.com" class="pl site-title">Shorts Tracker</a>
+            <div class="navbar-links">
+                <a href="https://shortstracker.com/about" class="en">About Us</a>
+                <a href="https://shortstracker.com/about" class="pl">O Nas</a>
+                <button class="theme-switch">🌓</button>
+                <button class="lang-switch">EN/PL</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1 class="en">About Us</h1>
+        <h1 class="pl">O Nas</h1>
+        
+        <div class="pl">
+            <p>Wraz ze wzrostem dostępu do urządzeń mobilnych, rośnie problem uzależnień z ich korzystania. Problem występuje wśród niemal wszystkich grup wiekowych, a w szczególności dosięga młodzieży. Uzależnienie prowadzi do pogorszenia staniu zdrowia psychicznego oraz ma negatywne skutki w zdrowiu fizycznym.</p>
+            
+            <p>Nasz projekt polega na przedstawieniu w przyjemny sposób danych dotyczących korzystania z telefonu. Dodatkowo aplikacja ma funkcję edukacyjną, udostępnimy artykuły z poradami jak ograniczyć czas spędzany przed ekranem oraz jak zachęcać do tego innych. W dużym uproszczeniu nasz projekt ma na celu pomoc w zwalczaniu problemu uzależnień.</p>
+        </div>
+
+        <div class="en">
+            <p>With the increasing access to mobile devices, addiction problems related to their use are growing. This issue affects almost all age groups, but particularly impacts young people. This addiction leads to deterioration of mental health and has negative effects on physical health.</p>
+            
+            <p>Our project aims to present phone usage data in an engaging way. Additionally, the app has an educational function - we will provide articles with tips on how to limit screen time and how to encourage others to do the same. In simple terms, our project aims to help combat addiction problems.</p>
+        </div>
+    </main>
+
+    <script>
+        const themeSwitch = document.querySelector('.theme-switch');
+        themeSwitch.addEventListener('click', () => {
+            document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+        });
+
+        const langSwitch = document.querySelector('.lang-switch');
+        langSwitch.addEventListener('click', () => {
+            const html = document.documentElement;
+            html.lang = html.lang === 'pl' ? 'en' : 'pl';
+        });
+    </script>
+</body>
+</html>
