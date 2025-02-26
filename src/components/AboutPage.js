@@ -24,7 +24,7 @@ const AboutPage = () => {
       paragraph1: 'Wraz ze wzrostem dostępu do urządzeń mobilnych, rośnie problem uzależnień z ich korzystania. Problem występuje wśród niemal wszystkich grup wiekowych, a w szczególności dosięga młodzieży. Uzależnienie prowadzi do pogorszenia staniu zdrowia psychicznego oraz ma negatywne skutki w zdrowiu fizycznym.',
       paragraph2: 'Nasz projekt polega na przedstawieniu w przyjemny sposób danych dotyczących korzystania z telefonu. Dodatkowo aplikacja ma funkcję edukacyjną, udostępnimy artykuły z poradami jak ograniczyć czas spędzany przed ekranem oraz jak zachęcać do tego innych. W dużym uproszczeniu nasz projekt ma na celu pomoc w zwalczaniu problemu uzależnień.',
       copyright: '© 2025 Shorts Tracker',
-      project: 'Projekt Olimiady Zwolnieni z Teorii',
+      project: 'Olimpiada Zwolnieni z Teorii'
     },
     en: {
       title: 'Shorts Tracker',
@@ -33,7 +33,7 @@ const AboutPage = () => {
       paragraph1: 'With the increasing access to mobile devices, addiction problems related to their use are growing. This issue affects almost all age groups, but particularly impacts young people. This addiction leads to deterioration of mental health and has negative effects on physical health.',
       paragraph2: 'Our project aims to present phone usage data in an engaging way. Additionally, the app has an educational function - we will provide articles with tips on how to limit screen time and how to encourage others to do the same. In simple terms, our project aims to help combat addiction problems.',
       copyright: '© 2025 Shorts Tracker',
-      project: 'Olimiada Zwolnieni z Teorii',
+      project: 'Olimpiada Zwolnieni z Teorii'
     }
   };
 

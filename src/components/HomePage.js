@@ -23,7 +23,7 @@ const HomePage = () => {
       download: 'Pobierz z Google Play',
       followUs: 'Śledź nas w social mediach:',
       copyright: '© 2025 Shorts Tracker',
-      project: 'Projekt Olimpiady Zwolnionych z Teorii',
+      project: 'Olimpiada Zwolnieni z Teorii',
       feature1Title: 'Śledź Użycie',
       feature1Desc: 'Monitoruj codzienne oglądanie krótkich filmów i analizuj swoje nawyki.',
       feature2Title: 'Zachowaj Skupienie',
@@ -36,7 +36,7 @@ const HomePage = () => {
       download: 'Download from Google Play',
       followUs: 'Follow us on social media:',
       copyright: '© 2025 Shorts Tracker',
-      project: 'Olimiada Zwolnieni z Teorii',
+      project: 'Olimpiada Zwolnieni z Teorii',
       feature1Title: 'Track Usage',
       feature1Desc: 'Monitor your daily short video consumption and get insights into your viewing habits.',
       feature2Title: 'Stay Focused',
@@ -109,16 +109,28 @@ const HomePage = () => {
       <section className="py-12 text-center">
         <h3 className="text-2xl mb-8">{currentText.followUs}</h3>
         <div className="flex justify-center gap-8">
-          {/* Białe ikony social media */}
-          <a href="#" className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white">
+          {/* Zamiana linków na przyciski, aby uniknąć błędów ESLint */}
+          <button 
+            onClick={() => window.open('https://instagram.com', '_blank')} 
+            className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white"
+            aria-label="Instagram"
+          >
             <Instagram size={24} />
-          </a>
-          <a href="#" className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white">
+          </button>
+          <button 
+            onClick={() => window.open('https://facebook.com', '_blank')} 
+            className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white"
+            aria-label="Facebook"
+          >
             <Facebook size={24} />
-          </a>
-          <a href="#" className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white">
+          </button>
+          <button 
+            onClick={() => window.open('https://youtube.com', '_blank')} 
+            className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white"
+            aria-label="YouTube"
+          >
             <Youtube size={24} />
-          </a>
+          </button>
         </div>
       </section>
 
